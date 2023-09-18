@@ -31,7 +31,7 @@ jobs:
 
       - name: Push to AWS CodeCommit
         run: |
-          git remote add origin https://git-codecommit.us-east-1.amazonaws.com/v1/repos/test-cicd
+          git remote add codecommit https://git-codecommit.us-east-1.amazonaws.com/v1/repos/test-cicd
           git config credential.helper '!aws codecommit credential-helper $@'
           git config credential.UseHttpPath true
           git checkout -b master
